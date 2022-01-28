@@ -22,7 +22,7 @@ export default function Login() {
 
   return (
     <article className={styles.modalWindow}>
-      <form className={styles.loginContainer}>
+      <form className={styles.loginContainer} onSubmit={e => handleSubmit(e)} >
         <h1>Login</h1>
         <label>
           <p>Email</p>
@@ -46,7 +46,7 @@ export default function Login() {
             autoComplete="off"
           />
         </label>
-        <input type='submit' value='Login' onSubmit={(e) => handleSubmit(e)} />
+        <input type='submit' value='Login' />
       </form>
     </article>
   )
